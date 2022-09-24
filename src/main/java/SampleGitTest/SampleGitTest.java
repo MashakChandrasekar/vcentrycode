@@ -12,15 +12,11 @@ import org.testng.annotations.Test;
 
 public class SampleGitTest {
 	
-	@Test
-	public void logintest() throws IOException
-	{
+	public static void main(String[] args) {
 		WebDriver wd = new FirefoxDriver();
 		wd.manage().window().maximize();
 		wd.get("https://www.google.com/");
 		File f =((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(f,new File("E:\\Vmetry\\SampleGit\\Snapshots\\snap.jpeg"));
-		
 	}
-
 }
